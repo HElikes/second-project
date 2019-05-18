@@ -1,0 +1,18 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+
+
+
+.form-container{
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+}
+.form-container h1{
+    line-height: 100px;
+}
+.form-message{
+    margin-left: 20px;
+}

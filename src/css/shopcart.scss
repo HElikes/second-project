@@ -1,0 +1,329 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+@import "module/side.scss";
+
+main{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 155px;
+    padding-bottom: 40px;
+    background: #f5f5f5;
+    .mycart{
+        padding: 84px 0;
+        color: #666;
+        font-size: 14px;
+        .mycart-top{
+            font-size: 16px;
+            height: 26px;
+            line-height: 26px;
+            padding: 15px 0;
+            background: #fff;
+            .f1{
+                float: left;
+            }
+            .sp-1{
+                width: 86px;
+            }
+            .sp-2{
+                width: 150px;
+            }
+            .sp-3{
+                width: 267px;
+            }
+            .sp-4{
+                width: 160px;
+            }
+            .sp-5{
+                width: 142px;
+            }
+            .sp-6{
+                width: 118px;
+                margin-right: 80px;
+                text-align: center;
+            }
+            .sp-7 {
+                width: 140px;
+            }
+            .sp-8 {
+                width: 120px;
+            }
+        }
+        .mycart-shop{
+            .allbtn{
+                font-size: 16px;
+                line-height: 26px;
+                padding: 25px 0 15px;
+                .allcheck{                 
+                    line-height: 26px;
+                    margin: 0 26px 0 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    zoom: 1;
+                    cursor: pointer;
+                    position: relative;
+                    input{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                p{
+                    display: inline-block;
+                }
+            }
+            .mycart-list{
+                width: 100%;
+                height: auto;
+                .mycart-item{
+                    height: 115px;
+                    background: #fff;
+                    margin-bottom: 10px;
+                    padding: 10px 0;
+                    .mycart-item-row{
+                        line-height: 24px;
+                        color: #333;
+                        .f1{
+                            float: left;
+                        }
+                        .sp-1{
+                            width: 86px;
+                            line-height: 115px;
+                            .check{                              
+                                line-height: 24px;
+                                background: #fafafa;
+                                margin: 0 26px 0 30px;
+                                display: inline-block;
+                                vertical-align: middle;
+                                zoom: 1;
+                                cursor: pointer;
+                                position: relative;
+                                input{
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+                        }
+                        .sp-2{
+                            width: 150px;
+                            .mycart-item-img{
+                                width: 113px;
+                                height: 113px;
+                                overflow: hidden;
+                                border: 1px solid #ddd;
+                                position: relative;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                }
+                            }
+                        }
+                        .sp-3{
+                            width: 267px;
+                            .mycart-item-name{
+                                width: 240px;
+                                max-height: 48px;
+                                margin-top: 5px;
+                                overflow: hidden;
+                            }
+                            .mycart-item-tag{
+                                font-size: 0;
+                                line-height: 0;
+                                padding: 7px 0;
+                                span{
+                                    font-size: 12px;
+                                    color: #f74a4a;
+                                    border: 1px solid #f599a0;
+                                    border-radius: 3px;
+                                    padding: 0 4px;
+                                    margin-right: 10px;
+                                    line-height: 18px;
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    zoom: 1;
+                                }
+                            }
+                        }
+                        .sp-4{
+                            width: 160px;
+                            .mycart-item-sel{
+                                width: 116px;
+                                padding: 4px 34px 4px 10px;
+                                margin-left: -10px;
+                                position: relative;
+                                border: 1px solid transparent;
+                            }
+                        }
+                        .sp-5{
+                            width: 142px;
+                            .mycart-item-pri{
+                                font-weight: bold;
+                                margin-top: 5px;
+                                s{
+                                    display: block;
+                                    font-weight: normal;
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                        .sp-6{
+                            width: 118px;
+                            margin-right: 80px;
+                            text-align: center;
+                            .mycart-item-num{
+                                width: 118px;
+                                margin-right: 80px;
+                                text-align: center;
+                                .add{                                  
+                                    width: 30px;
+                                    height: 30px;
+                                    font-size: 26px;
+                                    line-height: 30px;
+                                    color: #666;
+                                    display: block;
+                                    border: 1px solid #ddd;
+                                    float: left;
+                                }
+                                input{
+                                    width: 54px;
+                                    border: 1px solid #ddd;
+                                    border-left: none;
+                                    border-right: none;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    color: #333;
+                                    display: block;
+                                    font-size: 14px;
+                                    cursor: default;
+                                    float: left;
+                                }
+                                .sub{
+                                    width: 30px;
+                                    height: 30px;
+                                    font-size: 26px;
+                                    line-height: 30px;
+                                    color: #666;
+                                    display: inline-block;
+                                    border: 1px solid #ddd;
+                                }
+                            }
+                        }
+                        .sp-7{
+                            width: 140px;
+                            .mycart-item-price{
+                                font-size: 16px;
+                                font-weight: bold;
+                                margin-top: 10px;
+                            }
+                        }
+                        .sp-8{
+                            width: 120px;
+                            .del-btn{
+                                color: #333;
+                                display: block;
+                            }
+                            .fav-btn{
+                                color: #333;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .mycart-js{
+                height: 72px;
+                background: #fff;
+                position: relative;
+                .mycart-info{
+                    color: #333;
+                    margin: 6px 180px 0 0;
+                    float: right;
+                    text-align: right;
+                    p{
+                        margin-bottom: 3px;                        
+                        b{
+                            color: #f74a4a;
+                            font-size: 20px;
+                        }
+                    }
+                    .b{
+                        color: #999;
+                    }
+                }
+            }
+            .mycart-zong{
+                width: 150px;
+                font-size: 18px;
+                text-align: center;
+                color: #fff;
+                line-height: 72px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #ff5556;
+            }
+        }
+    }
+    .recommend{
+        text-align: center;
+        padding-bottom: 40px;
+        border-top: 1px solid #eee;
+        h2{
+            height: 35px;
+            font-size: 24px;
+            line-height: 34px;
+            color: #666;
+            font-weight: normal;
+            padding: 0 12px;
+            background: #fafafa;
+            position: relative;
+            top: -15px;
+            display: inline-block;
+            vertical-align: top;
+            zoom: 1;
+        }
+        .recm-list{
+            display: flex;
+            justify-content: space-between;
+            li{
+                width: 242px;
+                margin: 10px 5px 0;
+                text-align: left;
+                .recm-img{
+                    width: 242px;
+                    height: 236px;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+                .recm-pic{
+                    height: 88px;
+                    font-size: 14px;
+                    background: #fff;
+                    padding: 0 9px;
+                    overflow: hidden;
+                    position: relative;
+                    p{
+                        margin: 14px 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    b{
+                        font-size: 24px;
+                        color: #f74a4a;
+                    }
+                    s{
+                        color: #999;
+                        text-decoration: line-through;
+                        margin-left: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

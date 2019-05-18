@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表-天涯明月刀周边商城</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <script src="../libs/art-template/template-web.js"></script>
+</head>
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <div class="main-bq">
+            <span><a href="/">首页></a> </span>
+            <span>通用日常</span>
+        </div>
+        <nav>
+            <div class="show-obj">
+                <dl>
+                    <dt>分类：</dt>
+                    <dd><a href="/html/list.html">全部</a></dd>
+                    <dd><a href="/html/list.html">数码3C</a></dd>
+                    <dd><a href="/html/list.html">毛绒玩具</a></dd>
+                    <dd><a href="/html/list.html">通用日常</a></dd>
+                    <dd><a href="/html/list.html">手办模型</a></dd>
+                    <dd><a href="/html/list.html">服饰配饰</a></dd>
+                    <dd><a href="/html/list.html">新品专区</a></dd>
+                </dl>
+            </div>
+            <div class="sort">
+                <dl class="sort-left">
+                    <dt>排序：</dt>
+                    <dd>默认</dd>
+                    <dd>
+                        <span>价格</span>
+                        <i></i>
+                    </dd>
+                    <dd>
+                        <span>新品</span>
+                        <i></i>
+                    </dd>
+                    <dd>
+                        <span>人气</span>
+                        <i></i>
+                    </dd>
+                    <dd>
+                        <span>销量</span>
+                        <i></i>
+                    </dd>
+                </dl>
+                <dl class="sort-right">
+                    <dt>筛选：</dt>
+                    <dd>
+                        <i></i>
+                        <span>有货</span>                       
+                    </dd>
+                    <dd>
+                        <i></i>
+                            <span>包邮</span>                       
+                        </dd>
+                    <dd>
+                        <i></i>
+                        <span>聚豆可抵</span>                       
+                    </dd>                       
+                </dl>      
+            </div>
+        </nav>
+
+        
+        <section>
+            <!-- ul空盒子 -->
+           <ul id="list-container"></ul>
+            <script id="list-template" type="text/html">
+                {{each list item price}}
+                <li>
+                    <a href="/html/detail.html?id={{item.id}}">
+                        <div class="hot">
+                            <span>热卖</span>
+                        </div>
+                            <img src="{{item.image}}" alt="">
+                        <div class="mess">
+                            <p>{{item.title}}</p>
+                            <div>
+                                <span class="new-pri">￥{{item.newprice}}</span>
+                                <span class="old-pri">￥{{item.oldprice}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>  
+                {{/each}}   
+            </script>
+
+            
+            <!-- <ul>
+                <li>
+                    <a href="javascript:;">
+                        <div class="hot">
+                            <span>热卖</span>
+                        </div>
+                            <img src="../images/20180522110403_35796.jpg" alt="">
+                        <div class="mess">
+                            <p>红叶折扇</p>
+                            <div>
+                                <span class="new-pri">￥69.00</span>
+                                <span class="old-pri">￥69.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                        <a href="javascript:;">
+                            <div class="hot">
+                                <span>热卖</span>
+                            </div>
+                            <img src="../images/20180522110403_35796.jpg" alt="">
+                            <div class="mess">
+                                <p>红叶折扇</p>
+                                <div>
+                                    <span class="new-pri">￥69.00</span>
+                                    <span class="old-pri">￥69.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="javascript:;">
+                                <div class="hot">
+                                    <span>新品</span>
+                                </div>
+                                <img src="../images/20180522110403_35796.jpg" alt="">
+                                <div class="mess">
+                                    <p>红叶折扇</p>
+                                    <div>
+                                        <span class="new-pri">￥69.00</span>
+                                        <span class="old-pri">￥69.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    <li>
+                    <a href="javascript:;">
+                        <div class="hot">
+                            <span>新品</span>
+                        </div>
+                        <img src="../images/20180522110403_35796.jpg" alt="">
+                        <div class="mess">
+                            <p>红叶折扇</p>
+                            <div>
+                                <span class="new-pri">￥69.00</span>
+                                <span class="old-pri">￥69.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>   
+                <li>
+                        <a href="javascript:;">
+                            <div class="hot">
+                                <span>新品</span>
+                            </div>
+                            <img src="../images/20180522110403_35796.jpg" alt="">
+                            <div class="mess">
+                                <p>红叶折扇</p>
+                                <div>
+                                    <span class="new-pri">￥69.00</span>
+                                    <span class="old-pri">￥69.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>     
+            </ul> -->
+            <!-- 分页按钮 -->
+            <div class="page">
+                <span class="page-btn"><a href="javascript:;">1</a></span>
+                <span class="prev"><a href="javascript:;"><i></i></a></span>
+                <span class="next"><a href="javascript:;"><i></i></a></span>
+            </div>
+        </section>
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <!-- 侧边栏容器 -->
+    <div id="side-container" class="side"></div>
+    <script src="/libs/requirejs/require.min.js" data-main="/js/list"></script>
+</body>
+</html>

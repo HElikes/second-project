@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车页</title>
+    <link rel="stylesheet" href="/css/shopcart.css">
+</head>
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <div class="mycart">
+            <div class="mycart-top">
+                <div class="f1 sp-1">&nbsp</div>
+                <p class="f1 sp-2">&nbsp</p>
+                <p class="f1 sp-3">商品信息</p>
+                <p class="f1 sp-4">&nbsp</p>
+                <p class="f1 sp-5">单价（元）</p>
+                <p class="f1 sp-6">数量</p>
+                <p class="f1 sp-7">金额（元）</p>
+                <p class="f1 sp-8">操作</p>
+            </div>
+            <div class="mycart-shop" id="mycart-shop">
+                <div class="allbtn">
+                    <span class="allcheck"><input type="checkbox"checked="checked"></span>
+                    <p>天涯明月刀供应商：魔匠文化</p>
+                </div>
+                <!-- 购物车列表盒子 -->
+                <div class="mycart-list" id="mycart-list"></div>
+               
+                <script type="text/html" id="mycart-template">
+                    {{each cart item}}
+                     <div class="mycart-item" data-id="{{item.id}}">    
+                        <div class="mycart-item-row">
+                            <div class="f1 sp-1">
+                                <span class="check" ><input type="checkbox" checked="checked"></span>
+                            </div>
+                            <div class="f1 sp-2">
+                                <div class="mycart-item-img">
+                                    <a href="javascript:;"><img src="{{item.image[0]}}"></a>
+                                </div>
+                            </div>
+                            <div class="f1 sp-3">
+                                <p class="mycart-item-name">{{item.title}}</p>
+                                <div class="mycart-item-tag">
+                                    <span>聚豆抵 2.00 元</span>
+                                </div>
+                            </div>
+                            <div class="f1 sp-4">
+                                <div class="mycart-item-sel">
+                                    <p>尺码：S</p>
+                                    <p>款式：水墨色（5月13号发货）</p>
+                                </div>
+                            </div>
+                            <div class="f1 sp-5">
+                                <p class="mycart-item-pri">
+                                   <span id="money">{{item.price}}</span>元
+                                </p>
+                            </div>
+                            <div class="f1 sp-6">
+                                <div class="mycart-item-num">
+                                    <span class="add" id="add" >+</span>
+                                    <input type="text" id="input-num" value="{{item.num}}">
+                                    <span class="sub" id="sub">-</span>
+                                </div>
+                            </div>
+                            <div class="f1 sp-7">
+                                <p class="mycart-item-price">
+                                   <span id="allmon" class="allmon"> {{item.price*item.num}}</span> 元
+                                </p>
+                            </div>
+                            <div class="f1 sp-8">
+                                <div class="mycart-item-btn">
+                                    <a class="del-btn" id="del-btn" href="javascript:;">删除</a>
+                                    <a class="fav-btn" href="javascript:;">移入收藏夹</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+               
+                <div class="mycart-js">
+                    <div class="mycart-info">
+                        <p>
+                            总价：
+                            <b class="money" id="moneyContainer"> <span class="sum">356.00</span> 元</b>                           
+                        </p>
+                        <p class="b">不含运费和其他优惠</p>
+                    </div>
+                    <a class="mycart-zong" id="mycart-zong">去结算</a>
+                </div>
+            </div>
+        </div>
+        <div class="recommend">
+            <h2>为你推荐</h2>
+            <ul class="recm-list">
+                <li>
+                    <div class="recm-img">
+                        <a href="javascript:;"><img src="/images/a5.jpg" alt=""></a>
+                    </div>
+                    <div class="recm-pic">
+                        <p>水龙吟手机壳</p>
+                        <b>49.00 元</b>
+                        <s>49.00 元</s>
+                    </div>
+                </li>
+                <li>
+                    <div class="recm-img">
+                        <a href="javascript:;"><img src="/images/a5.jpg" alt=""></a>
+                    </div>
+                    <div class="recm-pic">
+                        <p>水龙吟手机壳</p>
+                        <b>49.00 元</b>
+                        <s>49.00 元</s>
+                    </div>
+                </li>
+                <li>
+                    <div class="recm-img">
+                        <a href="javascript:;"><img src="/images/a5.jpg" alt=""></a>
+                    </div>
+                    <div class="recm-pic">
+                        <p>水龙吟手机壳</p>
+                        <b>49.00 元</b>
+                        <s>49.00 元</s>
+                    </div>
+                </li>
+                <li>
+                    <div class="recm-img">
+                        <a href="javascript:;"><img src="/images/a5.jpg" alt=""></a>
+                    </div>
+                    <div class="recm-pic">
+                        <p>水龙吟手机壳</p>
+                        <b>49.00 元</b>
+                        <s>49.00 元</s>
+                    </div>
+                </li>
+                <li>
+                    <div class="recm-img">
+                        <a href="javascript:;"><img src="/images/a5.jpg" alt=""></a>
+                    </div>
+                    <div class="recm-pic">
+                        <p>水龙吟手机壳</p>
+                        <b>49.00 元</b>
+                        <s>49.00 元</s>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <!-- 侧边栏容器 -->
+    <div id="side-container" class="side"></div>
+    <script src="/libs/requirejs/require.js" data-main="/js/shopcart.js"></script>
+</body>
+</html>

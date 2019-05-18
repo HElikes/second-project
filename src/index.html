@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天涯明月刀商城官网</title>
+    <link rel="stylesheet" href="/libs/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="libs/art-template/template-web.js"></script>
+</head>
+<body>
+    <!-- 头部模块 -->
+   <header id="header-container"></header>
+    <div class="content">
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/20181214200602_791291.jpg"></div>
+                <div class="swiper-slide"><img src="images/20190313110922_806251.jpg"></div>
+                <div class="swiper-slide"><img src="images/20190328164341_483447.jpg"></div>
+                <div class="swiper-slide"><img src="images/20190505095805_810074.jpg"></div>
+                <div class="swiper-slide"><img src="images/20180904183037_889558.jpg"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            
+        </div>
+        <!-- 商品内容区域 -->
+        <div class="box box1">
+            <div class="label">
+                <h3>服装服饰</h3>
+                <span>八荒齐聚，谁才是真正的武林萌主</span>
+                <a href="javascript:;" class="add">
+                    <span>更多</span>
+                    <i></i>
+                </a>
+            </div>
+            <div class="label-pic">
+                <a href="javascript:;"><img src="images/20190111144029_758517.jpg" alt=""></a>
+            </div>
+            <!-- list的盒子 -->
+            <div class="shop-list" id="list-container"></div>
+            <script id="list-template" type="text/html">
+                {{each list item price}}
+                <dl>
+                    <dt><a href="/html/list.html"><img src="{{item.image}}" alt=""></a></dt>
+                    <dd>{{item.title}}</dd>
+                    <dd>￥{{item.price}}</dd>
+                </dl>
+                {{/each}}   
+            </script> 
+        </div>
+        <div class="box box2">
+                <div class="label">
+                    <h3>毛绒玩具</h3>
+                    <span>八荒齐聚，谁才是真正的武林萌主</span>
+                    <a href="javascript:;" class="add">
+                        <span>更多</span>
+                        <i></i>
+                    </a>
+                </div>
+                <div class="label-pic">
+                    <a href="javascript:;"><img src="images/z1.jpg" alt=""></a>
+                </div>
+                <!-- list的盒子 -->
+            <div class="shop-list" id="list1-container"></div>
+            <script id="list1-template" type="text/html">
+                {{each list item price}}
+                <dl>
+                    <dt><a href="/html/list.html"><img src="{{item.image}}" alt=""></a></dt>
+                    <dd>{{item.title}}</dd>
+                    <dd>￥{{item.price}}</dd>
+                </dl>
+                {{/each}}   
+            </script> 
+        </div>
+        <div class="box box3">
+                    <div class="label">
+                        <h3>数码3C</h3>
+                        <span>八荒齐聚，谁才是真正的武林萌主</span>
+                        <a href="javascript:;" class="add">
+                            <span>更多</span>
+                            <i></i>
+                        </a>
+                    </div>
+                    <div class="label-pic">
+                        <a href="javascript:;"><img src="images/z2.jpg" alt=""></a>
+                    </div>
+                       <!-- list的盒子 -->
+            <div class="shop-list" id="list2-container"></div>
+            <script id="list2-template" type="text/html">
+                {{each list item price}}
+                <dl>
+                    <dt><a href="/html/list.html"><img src="{{item.image}}" alt=""></a></dt>
+                    <dd>{{item.title}}</dd>
+                    <dd>￥{{item.price}}</dd>
+                </dl>
+                {{/each}}   
+            </script> 
+        </div>
+        <div class="box box4">
+                <div class="label">
+                    <h3>通用日常</h3>
+                    <span>八荒齐聚，谁才是真正的武林萌主</span>
+                    <a href="javascript:;" class="add">
+                        <span>更多</span>
+                        <i></i>
+                    </a>
+                </div>
+                <div class="label-pic">
+                    <a href="javascript:;"><img src="images/z3.jpg" alt=""></a>
+                </div>
+                <!-- list的盒子 -->
+                <div class="shop-list" id="list3-container"></div>
+                <script id="list3-template" type="text/html">
+                    {{each list item price}}
+                    <dl>
+                        <dt><a href="/html/list.html"><img src="{{item.image}}" alt=""></a></dt>
+                        <dd>{{item.title}}</dd>
+                        <dd>￥{{item.price}}</dd>
+                    </dl>
+                    {{/each}}   
+                </script>             
+        </div>
+    </div>
+   <footer id="footer-container"></footer>
+   <div id="side-container" class="side"></div>
+   <script src="libs/requirejs/require.min.js" data-main="js/index"></script>
+</body>
+</html>

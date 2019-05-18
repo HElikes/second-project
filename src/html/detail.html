@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页-天涯明月刀周边商城</title>
+    <link rel="stylesheet" href="/css/detail.css">
+    <script src="../libs/art-template/template-web.js"></script>
+</head>
+<body>
+     <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <div class="main-title">
+            <a href="/" class="title-link">商城首页></a>
+            <a href="javascript:;" class="title-link m1">通用日常></a>
+            <a href="javascript:;" class="title-link m1">红叶扇></a>
+            <em>红叶折扇</em>
+        </div>
+        <!-- detail容器 -->
+        <div id="detail-container"></div>
+        <script type="text/html" id="detail-template">
+            
+            <!-- 商品详情展示 -->
+            <div class="box">
+                <!-- 细节图展示 -->
+                <div class="box-left">
+                    <div class="big-jpg">
+                        <img class="zoom-img" src="{{detail.image[0]}}"data-zoom-image="{{detail.image[0]}}">
+                    </div>
+                    <div class="sm-jpg" id="gal1">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" data-image="{{detail.image[0]}}" data-zoom-image="{{detail.image[0]}}">
+                                    <img src="{{detail.image[0]}}">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-image="{{detail.image[1]}}" data-zoom-image="{{detail.image[1]}}">
+                                    <img src="{{detail.image[1]}}">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-image="{{detail.image[2]}}" data-zoom-image="{{detail.image[2]}}">
+                                    <img src="{{detail.image[2]}}">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-image="{{detail.image[3]}}" data-zoom-image="{{detail.image[3]}}">
+                                    <img src="{{detail.image[3]}}">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-image="{{detail.image[4]}}" data-zoom-image="{{detail.image[4]}}">
+                                    <img src="{{detail.image[4]}}">
+                                </a>
+                            </li>
+                        </ul>                                                                                                                            
+                    </div>
+                </div>
+                <!-- 商品信息 -->
+                <div class="product-mess">
+                    <h3>{{detail.title}}</h3>
+                    <div class="ms">全场订单满百包邮</div>
+                    <div class="price">
+                        ￥<strong class="new-price">{{detail.price}}</strong>
+                        <span class="old-price">￥{{detail.price}}</span>
+                    </div>
+                    <div class="adv">
+                        <i></i>
+                        <span>可用20聚豆抵扣2.00元</span>
+                    </div>
+                    <div class="record">
+                        <div class="record-left">已售：<span>{{detail.saleNum}}</span></div>
+                        <div class="record-center">累计评价：<span>{{detail.comments}}</span></div>
+                        <div class="record-right">
+                            <i></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="spec">
+                        <label class="f1">规格</label>
+                        <ul>
+                            <li>
+                                <div>红叶</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-btn">
+                        <div class="num">
+                            <label class="f1 f2">数量</label>
+                            <div class="addbtn">
+                                <a href="javascript:;"><i>-</i></a>
+                                <input type="text" value="1">
+                                <a href="javascript:;"><i class="ff1">+</i></a>
+                            </div>
+                            <span>（库存充足）</span>
+                        </div>
+                        <div class="pord-btn">
+                            <a href="javascript:;" id="shop-add" data-id="{{detail.id}}">加入购物车</a>
+                            <a href="/html/shopcart.html" class="buy-btn">立即购买</a>
+                            <a href="javascript:;" class="btn-collect">
+                                <i></i>
+                                <span>收藏</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <!-- 商家点评 -->
+        <div class="appraise ">
+            <div class="prod-tab">
+                <ul>
+                    <li>
+                        商品详情
+                        <i></i>
+                    </li>
+                    <li>
+                        用户点评
+                        <span>(219)</span>
+                        <i></i>
+                    </li>
+                    <li>
+                        联系商家
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabcount">
+                <!-- 商品详情 -->
+                <div class="shop-x">
+                    <!-- 商品详情参数 -->
+                    <div class="shop-c">
+                        <ul>
+                            <li>
+                                <label class="f1">商品名称：</label>
+                                <span>红叶折扇</span>
+                            </li>
+                            <li>
+                                <label>店铺：</label>
+                                <span>魔匠文化</span>
+                            </li>
+                            <li>
+                                <label>上架时间：</label>
+                                <span>2019-02-23</span>
+                            </li>
+                            <li>
+                                <label>商品毛重：</label>
+                                <span>1g</span>
+                            </li>
+                            <li>
+                                <label>商城：</label>
+                                <span>天涯明月刀</span>
+                            </li>
+                            <li>
+                                <label>周边分类：</label>
+                                <span>通用日常 /红叶扇</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>          
+                <!-- 商品详情图 -->
+                <div class="detailbox">
+                    <p><img src="/images/0.jpg" alt=""></p>
+                </div>
+            </div>
+            <!-- 用户点评 -->
+            <div class="talk">
+                <div class="talk-nav">
+                    <span>玩家综合评分：</span>
+                    <i></i>
+                    <span>5.0</span>
+                </div>
+                <div class="talk-list">
+                    <ul class="cent-ul">
+                        <li>
+                            <div class="f1 head">
+                                <div><img src="/images/g.jpg" alt=""></div>
+                                <p class="fname">悉 茗</p>
+                            </div>
+                            <div class="critical">
+                                <div class="comment">
+                                    <span class="f1">商品评分</span>
+                                    <i></i>
+                                    <span class="mm">5.0分</span>
+                                    <b>精彩评论</b>
+                                    <div class="new-time">2018-07-09  14:01:21</div>
+                                </div>
+                                <p class="text">我不要你用八个傀儡保护我，我愿意为你倾覆全世界，只要你安好。游游山水，吃吃美食，我永远喜欢唐师兄！</p>
+                                <div class="pic-list">
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <img src="/images/a1.jpg" alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f1 head">
+                                <div><img src="/images/ds.jpg" alt=""></div>
+                                <p class="fname">优越崇高的黑暗</p>
+                            </div>
+                            <div class="critical">
+                                <div class="comment">
+                                    <span class="f1">商品评分</span>
+                                    <i></i>
+                                    <span class="mm">5.0分</span>
+                                    <b>精彩评论</b>
+                                    <div class="new-time">2019-04-26 18:28:29</div>
+                                </div>
+                                <p class="text">包装不错，做工也可以</p>
+                                <div class="pic-list"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f1 head">
+                                <div><img src="/images/g2.jpg" alt=""></div>
+                                <p class="fname">Puppet</p>
+                            </div>
+                            <div class="critical">
+                                <div class="comment">
+                                    <span class="f1">商品评分</span>
+                                    <i></i>
+                                    <span class="mm">5.0分</span>
+                                    <b>精彩评论</b>
+                                    <div class="new-time">2019-03-29 15:51:31</div>
+                                </div>
+                                <p class="text">默认好评</p>
+                                <div class="pic-list"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 分页按钮 -->
+                <div class="pages">
+                    <span class="p-f">共219条记录</span>
+                    <span class="p_prve"><a href="javascript:;">上一页</a></span>
+                    <span class="page_btn active"><a href="javascript:;">1</a></span>
+                    <span class="page_btn"><a href="javascript:;">2</a></span>
+                    <span class="page_btn"><a href="javascript:;">3</a></span>
+                    <span class="page_btn"><a href="javascript:;">4</a></span>
+                    <span class="page_btn"><a href="javascript:;">5</a></span>                  
+                    <span class="p_next"><a href="javascript:;">下一页</a></span>
+                </div>
+            </div>
+            <!-- 联系商家 -->
+            <div class="contact">
+                <dl class="contact-com">
+                    <dt>商家：魔匠文化</dt>
+                    <dd></dd>
+                </dl>
+                <dl class="contact-mid">
+                    <dt>商家联系方式</dt>
+                    <dd>
+                        <div>电话：400-0188656</div>
+                        <div>ＱＱ：1909273330</div>
+                        <div>微信：</div>
+                        <div class="qq"><a href="javascript:;">联系客服</a></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>商家服务时间</dt>
+                    <dd>
+                        <div>在线时间：9:00--18:00</div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        
+           
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <!-- 侧边栏容器 -->
+    <div id="side-container" class="side"></div>
+    <script src="/libs/requirejs/require.min.js" data-main="/js/detail"></script>
+</body>
+</html>
